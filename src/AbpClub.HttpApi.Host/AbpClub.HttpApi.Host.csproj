@@ -25,6 +25,9 @@
     <ProjectReference Include="..\AbpClub.Application\AbpClub.Application.csproj" />
     <ProjectReference Include="..\AbpClub.EntityFrameworkCore\AbpClub.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\AbpClub.HttpApi\AbpClub.HttpApi.csproj" />
+    <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.HttpApi\Volo.CmsKit.HttpApi.csproj" />
+    <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.Application\Volo.CmsKit.Application.csproj" />
+    <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.EntityFrameworkCore\Volo.CmsKit.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

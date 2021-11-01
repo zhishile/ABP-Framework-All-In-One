@@ -6,6 +6,11 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Volo.CmsKit;
+using Volo.Abp.BlobStoring;
+using Volo.Abp.BlobStoring.FileSystem;
+using System.IO;
+using Volo.CmsKit.MediaDescriptors;
 
 namespace AbpClub
 {
@@ -17,7 +22,9 @@ namespace AbpClub
         typeof(AbpPermissionManagementApplicationModule),
         typeof(AbpTenantManagementApplicationModule),
         typeof(AbpFeatureManagementApplicationModule),
-        typeof(AbpSettingManagementApplicationModule)
+        typeof(AbpSettingManagementApplicationModule),
+        typeof(CmsKitApplicationModule),
+        typeof(AbpBlobStoringFileSystemModule)
         )]
     public class AbpClubApplicationModule : AbpModule
     {
@@ -26,6 +33,24 @@ namespace AbpClub
             Configure<AbpAutoMapperOptions>(options =>
             {
                 options.AddMaps<AbpClubApplicationModule>();
+            });
+            //文件存储配置
+            Configure<AbpBlobStoringOptions>(options =>
+            {
+                options.Containers.Configure<MediaContainer>(container =>
+                {
+                    container.UseFileSystem(fileSystem =>
+                    {
+                        container.IsMultiTenant = false;
+                        var upload_images_path =Path.Combine(
+                            Directory.GetCurrentDirectory()
+                            ,"wwwroot"
+                            ,"Uploads/Images/");
+                        
+                        //必须设置否则会引发异常
+                        fileSystem.BasePath = upload_images_path;
+                    });
+                });
             });
         }
     }

@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using Volo.Abp.GlobalFeatures;
+using Volo.CmsKit;
 
 namespace AbpClub.EntityFrameworkCore
 {
@@ -11,6 +13,15 @@ namespace AbpClub.EntityFrameworkCore
     {
         public AbpClubDbContext CreateDbContext(string[] args)
         {
+            //启用Cms-Kit全局功能
+            /*
+            GlobalFeatureManager.Instance.Modules.CmsKit(cmsKit =>
+            {
+                cmsKit.EnableAll();
+            });
+            */
+            FeatureConfigurer.Configure();
+            
             AbpClubEfCoreEntityExtensionMappings.Configure();
 
             var configuration = BuildConfiguration();

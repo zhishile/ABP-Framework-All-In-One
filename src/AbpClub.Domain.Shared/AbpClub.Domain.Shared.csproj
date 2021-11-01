@@ -17,6 +17,7 @@
     <ProjectReference Include="..\..\abp\modules\feature-management\src\Volo.Abp.FeatureManagement.Domain.Shared\Volo.Abp.FeatureManagement.Domain.Shared.csproj" />
     <ProjectReference Include="..\..\abp\modules\permission-management\src\Volo.Abp.PermissionManagement.Domain.Shared\Volo.Abp.PermissionManagement.Domain.Shared.csproj" />
     <ProjectReference Include="..\..\abp\modules\setting-management\src\Volo.Abp.SettingManagement.Domain.Shared\Volo.Abp.SettingManagement.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.Domain.Shared\Volo.CmsKit.Domain.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

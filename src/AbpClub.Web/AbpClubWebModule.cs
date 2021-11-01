@@ -40,6 +40,9 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.CmsKit.Web;
+using Volo.Abp.GlobalFeatures;
+using Volo.CmsKit;
 
 namespace AbpClub.Web
 {
@@ -56,12 +59,21 @@ namespace AbpClub.Web
         typeof(AbpIdentityWebModule),
         typeof(AbpTenantManagementWebModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule)
+        typeof(AbpSwashbuckleModule),
+        typeof(CmsKitWebModule)
         )]
     public class AbpClubWebModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
         {
+            /*
+            GlobalFeatureManager.Instance.Modules.CmsKit(cmsKit =>
+            {
+                cmsKit.EnableAll();
+            });
+            */
+            FeatureConfigurer.Configure();
+
             context.Services.PreConfigure<AbpMvcDataAnnotationsLocalizationOptions>(options =>
             {
                 options.AddAssemblyResource(

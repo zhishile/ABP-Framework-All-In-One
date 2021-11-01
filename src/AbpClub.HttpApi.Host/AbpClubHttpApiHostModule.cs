@@ -26,6 +26,9 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using Volo.CmsKit;
+using Volo.CmsKit.EntityFrameworkCore;
+using Volo.Abp.GlobalFeatures;
 
 namespace AbpClub
 {
@@ -37,10 +40,23 @@ namespace AbpClub
         typeof(AbpClubApplicationModule),
         typeof(AbpClubEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreSerilogModule),
-        typeof(AbpSwashbuckleModule)
+        typeof(AbpSwashbuckleModule),
+        typeof(CmsKitHttpApiModule),
+        typeof(CmsKitApplicationModule),
+        typeof(CmsKitEntityFrameworkCoreModule)
     )]
     public class AbpClubHttpApiHostModule : AbpModule
     {
+        public override void PreConfigureServices(ServiceConfigurationContext context)
+        {
+            /*
+            GlobalFeatureManager.Instance.Modules.CmsKit(cmsKit =>
+            {
+                cmsKit.EnableAll();
+            });
+            */
+            FeatureConfigurer.Configure();
+        }
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var configuration = context.Services.GetConfiguration();
