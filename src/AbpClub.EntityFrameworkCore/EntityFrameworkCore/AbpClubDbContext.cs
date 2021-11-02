@@ -13,6 +13,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.CmsKit.EntityFrameworkCore;
+using Volo.Docs.EntityFrameworkCore;
 
 namespace AbpClub.EntityFrameworkCore
 {
@@ -75,6 +76,7 @@ namespace AbpClub.EntityFrameworkCore
             builder.ConfigureTenantManagement();
 
             builder.ConfigureCmsKit();
+            builder.ConfigureDocs();
 
             /* Configure your own tables/entities inside here */
 

@@ -7,6 +7,8 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.CmsKit;
+using Volo.Docs;
+using Volo.Docs.Admin;
 
 namespace AbpClub
 {
@@ -18,7 +20,9 @@ namespace AbpClub
         typeof(AbpTenantManagementHttpApiClientModule),
         typeof(AbpFeatureManagementHttpApiClientModule),
         typeof(AbpSettingManagementHttpApiClientModule),
-        typeof(CmsKitHttpApiClientModule)
+        typeof(CmsKitHttpApiClientModule),
+        typeof(DocsHttpApiClientModule),
+        typeof(DocsAdminHttpApiClientModule)
     )]
     public class AbpClubHttpApiClientModule : AbpModule
     {

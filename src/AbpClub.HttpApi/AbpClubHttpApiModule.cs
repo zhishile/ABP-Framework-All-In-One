@@ -8,6 +8,8 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Docs;
+using Volo.Docs.Admin;
 
 namespace AbpClub
 {
@@ -18,7 +20,9 @@ namespace AbpClub
         typeof(AbpPermissionManagementHttpApiModule),
         typeof(AbpTenantManagementHttpApiModule),
         typeof(AbpFeatureManagementHttpApiModule),
-        typeof(AbpSettingManagementHttpApiModule)
+        typeof(AbpSettingManagementHttpApiModule),
+        typeof(DocsHttpApiModule),
+        typeof(DocsAdminHttpApiModule)
         )]
     public class AbpClubHttpApiModule : AbpModule
     {

@@ -11,6 +11,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.CmsKit.EntityFrameworkCore;
+using Volo.Docs.EntityFrameworkCore;
 
 namespace AbpClub.EntityFrameworkCore
 {
@@ -25,7 +26,8 @@ namespace AbpClub.EntityFrameworkCore
         typeof(AbpAuditLoggingEntityFrameworkCoreModule),
         typeof(AbpTenantManagementEntityFrameworkCoreModule),
         typeof(AbpFeatureManagementEntityFrameworkCoreModule),
-        typeof(CmsKitEntityFrameworkCoreModule)
+        typeof(CmsKitEntityFrameworkCoreModule),
+        typeof(DocsEntityFrameworkCoreModule)
         )]
     public class AbpClubEntityFrameworkCoreModule : AbpModule
     {

@@ -21,6 +21,8 @@
     <ProjectReference Include="..\..\abp\modules\setting-management\src\Volo.Abp.SettingManagement.Application\Volo.Abp.SettingManagement.Application.csproj" />
     <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.Application\Volo.CmsKit.Application.csproj" />
     <ProjectReference Include="..\..\abp\framework\src\Volo.Abp.BlobStoring.FileSystem\Volo.Abp.BlobStoring.FileSystem.csproj" />
+    <ProjectReference Include="..\..\abp\modules\docs\src\Volo.Docs.Admin.Application\Volo.Docs.Admin.Application.csproj" />
+    <ProjectReference Include="..\..\abp\modules\docs\src\Volo.Docs.Application\Volo.Docs.Application.csproj" />
   </ItemGroup>
 
 </Project>

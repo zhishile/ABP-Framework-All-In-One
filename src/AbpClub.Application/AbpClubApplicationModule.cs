@@ -11,6 +11,8 @@ using Volo.Abp.BlobStoring;
 using Volo.Abp.BlobStoring.FileSystem;
 using System.IO;
 using Volo.CmsKit.MediaDescriptors;
+using Volo.Docs;
+using Volo.Docs.Admin;
 
 namespace AbpClub
 {
@@ -24,7 +26,9 @@ namespace AbpClub
         typeof(AbpFeatureManagementApplicationModule),
         typeof(AbpSettingManagementApplicationModule),
         typeof(CmsKitApplicationModule),
-        typeof(AbpBlobStoringFileSystemModule)
+        typeof(AbpBlobStoringFileSystemModule),
+        typeof(DocsApplicationModule),
+        typeof(DocsAdminApplicationModule)
         )]
     public class AbpClubApplicationModule : AbpModule
     {

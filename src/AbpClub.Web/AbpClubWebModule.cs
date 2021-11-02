@@ -44,6 +44,8 @@ using Volo.CmsKit.Web;
 using Volo.Abp.GlobalFeatures;
 using Volo.CmsKit;
 using Volo.Abp.VirtualFileExplorer.Web;
+using Volo.Docs;
+using Volo.Docs.Admin;
 
 namespace AbpClub.Web
 {
@@ -62,7 +64,9 @@ namespace AbpClub.Web
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule),
         typeof(CmsKitWebModule),
-        typeof(AbpVirtualFileExplorerWebModule)
+        typeof(AbpVirtualFileExplorerWebModule),
+        typeof(DocsWebModule),
+        typeof(DocsAdminWebModule)
         )]
     public class AbpClubWebModule : AbpModule
     {

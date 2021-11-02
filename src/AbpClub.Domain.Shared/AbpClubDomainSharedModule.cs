@@ -13,6 +13,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 using Volo.CmsKit;
+using Volo.Docs;
 
 namespace AbpClub
 {
@@ -25,7 +26,8 @@ namespace AbpClub
         typeof(AbpPermissionManagementDomainSharedModule),
         typeof(AbpSettingManagementDomainSharedModule),
         typeof(AbpTenantManagementDomainSharedModule),
-        typeof(CmsKitDomainSharedModule)
+        typeof(CmsKitDomainSharedModule),
+        typeof(DocsDomainSharedModule)
         )]
     public class AbpClubDomainSharedModule : AbpModule
     {

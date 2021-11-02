@@ -6,6 +6,8 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Docs;
+using Volo.Docs.Admin;
 
 namespace AbpClub
 {
@@ -17,7 +19,9 @@ namespace AbpClub
         typeof(AbpPermissionManagementApplicationContractsModule),
         typeof(AbpSettingManagementApplicationContractsModule),
         typeof(AbpTenantManagementApplicationContractsModule),
-        typeof(AbpObjectExtendingModule)
+        typeof(AbpObjectExtendingModule),
+        typeof(DocsApplicationContractsModule),
+        typeof(DocsAdminApplicationContractsModule)
     )]
     public class AbpClubApplicationContractsModule : AbpModule
     {

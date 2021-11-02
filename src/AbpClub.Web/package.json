@@ -1,10 +1,11 @@
 {
   "version": "1.0.0",
-  "name": "my-app",
+  "name": "abpclub",
   "private": true,
   "dependencies": {
     "@abp/aspnetcore.mvc.ui.theme.basic": "^4.4.3",
     "@abp/cms-kit": "4.4.3",
+    "@abp/docs": "^4.4.3",
     "@abp/jstree": "4.4.3",
     "@abp/tui-editor": "^4.4.3",
     "@abp/uppy": "^4.4.3",

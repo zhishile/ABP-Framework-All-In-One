@@ -22,6 +22,7 @@
     <ProjectReference Include="..\..\abp\modules\tenant-management\src\Volo.Abp.TenantManagement.Domain\Volo.Abp.TenantManagement.Domain.csproj" />
     <ProjectReference Include="..\..\abp\modules\feature-management\src\Volo.Abp.FeatureManagement.Domain\Volo.Abp.FeatureManagement.Domain.csproj" />
     <ProjectReference Include="..\..\abp\modules\setting-management\src\Volo.Abp.SettingManagement.Domain\Volo.Abp.SettingManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\abp\modules\docs\src\Volo.Docs.Domain\Volo.Docs.Domain.csproj" />
   </ItemGroup>
 
 </Project>

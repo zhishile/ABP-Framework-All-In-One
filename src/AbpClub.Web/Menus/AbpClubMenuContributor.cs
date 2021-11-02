@@ -63,6 +63,8 @@ namespace AbpClub.Web.Menus
             administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
             administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
 
+            context.Menu.Items.Add(new ApplicationMenuItem("AbpClub.Document", l["Menu:Docs"], "/Documents"));
+
             return Task.CompletedTask;
         }
 

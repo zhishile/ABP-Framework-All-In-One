@@ -19,6 +19,8 @@
     <ProjectReference Include="..\..\abp\modules\feature-management\src\Volo.Abp.FeatureManagement.HttpApi\Volo.Abp.FeatureManagement.HttpApi.csproj" />
     <ProjectReference Include="..\..\abp\modules\setting-management\src\Volo.Abp.SettingManagement.HttpApi\Volo.Abp.SettingManagement.HttpApi.csproj" />
     <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.HttpApi\Volo.CmsKit.HttpApi.csproj" />
+    <ProjectReference Include="..\..\abp\modules\docs\src\Volo.Docs.HttpApi\Volo.Docs.HttpApi.csproj" />
+    <ProjectReference Include="..\..\abp\modules\docs\src\Volo.Docs.Admin.HttpApi\Volo.Docs.Admin.HttpApi.csproj" />
   </ItemGroup>
 
 </Project>
