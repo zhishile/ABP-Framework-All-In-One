@@ -43,6 +43,7 @@ using Volo.Abp.VirtualFileSystem;
 using Volo.CmsKit.Web;
 using Volo.Abp.GlobalFeatures;
 using Volo.CmsKit;
+using Volo.Abp.VirtualFileExplorer.Web;
 
 namespace AbpClub.Web
 {
@@ -60,7 +61,8 @@ namespace AbpClub.Web
         typeof(AbpTenantManagementWebModule),
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule),
-        typeof(CmsKitWebModule)
+        typeof(CmsKitWebModule),
+        typeof(AbpVirtualFileExplorerWebModule)
         )]
     public class AbpClubWebModule : AbpModule
     {
@@ -100,6 +102,12 @@ namespace AbpClub.Web
             ConfigureNavigationServices(configuration);
             ConfigureMultiTenancy();
             ConfigureSwaggerServices(context.Services);
+
+            /* 禁用虚拟文件浏览模块
+            Configure<AbpVirtualFileExplorerOptions>(options=>{
+                options.IsEnabled = false;
+            });
+            */
         }
 
         private void ConfigureBundles()

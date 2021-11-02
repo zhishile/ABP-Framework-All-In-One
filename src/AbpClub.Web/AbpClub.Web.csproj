@@ -36,6 +36,7 @@
     <ProjectReference Include="..\AbpClub.HttpApi\AbpClub.HttpApi.csproj" />
     <ProjectReference Include="..\AbpClub.HttpApi.Client\AbpClub.HttpApi.Client.csproj" />
     <ProjectReference Include="..\..\abp\modules\cms-kit\src\Volo.CmsKit.Web\Volo.CmsKit.Web.csproj" />
+    <ProjectReference Include="..\..\abp\modules\virtual-file-explorer\src\Volo.Abp.VirtualFileExplorer.Web\Volo.Abp.VirtualFileExplorer.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
