@@ -17,8 +17,6 @@ using Volo.Abp.Account.Web;
 using Volo.Abp.AspNetCore.Mvc.UI;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Auditing;
@@ -31,6 +29,8 @@ using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
 
 namespace AbpClub
 {
@@ -39,7 +39,7 @@ namespace AbpClub
         typeof(AbpCachingStackExchangeRedisModule),
         typeof(AbpAccountWebIdentityServerModule),
         typeof(AbpAccountApplicationModule),
-        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        typeof(AbpAspNetCoreMvcUiLeptonXLiteThemeModule),
         typeof(AbpClubEntityFrameworkCoreModule),
         typeof(AbpAspNetCoreSerilogModule)
         )]
@@ -80,7 +80,7 @@ namespace AbpClub
             Configure<AbpBundlingOptions>(options =>
             {
                 options.StyleBundles.Configure(
-                    BasicThemeBundles.Styles.Global,
+                    LeptonXLiteThemeBundles.Styles.Global,
                     bundle =>
                     {
                         bundle.AddFiles("/global-styles.css");

@@ -19,8 +19,8 @@ using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
+// using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
+// using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
 using Volo.Abp.AspNetCore.Serilog;
@@ -46,6 +46,9 @@ using Volo.CmsKit;
 using Volo.Abp.VirtualFileExplorer.Web;
 using Volo.Docs;
 using Volo.Docs.Admin;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Bundling;
+using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 
 namespace AbpClub.Web
 {
@@ -54,7 +57,8 @@ namespace AbpClub.Web
         typeof(AbpClubHttpApiClientModule),
         typeof(AbpAspNetCoreAuthenticationOpenIdConnectModule),
         typeof(AbpAspNetCoreMvcClientModule),
-        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        //typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        typeof(AbpAspNetCoreMvcUiLeptonXLiteThemeModule),
         typeof(AbpAutofacModule),
         typeof(AbpCachingStackExchangeRedisModule),
         typeof(AbpSettingManagementWebModule),
@@ -112,6 +116,8 @@ namespace AbpClub.Web
                 options.IsEnabled = false;
             });
             */
+
+            //ConfigureTheme();
         }
 
         private void ConfigureBundles()
@@ -119,12 +125,23 @@ namespace AbpClub.Web
             Configure<AbpBundlingOptions>(options =>
             {
                 options.StyleBundles.Configure(
-                    BasicThemeBundles.Styles.Global,
+                    //BasicThemeBundles.Styles.Global,
+                    LeptonXLiteThemeBundles.Styles.Global,
                     bundle =>
                     {
                         bundle.AddFiles("/global-styles.css");
                     }
                 );
+            });
+        }
+
+        private void ConfigureTheme()
+        {
+            Configure<AbpThemingOptions>(options =>
+            {
+                //options.Themes.Add<AbpIoTheme>();
+                
+                options.DefaultThemeName = LeptonXLiteTheme.Name;// "LeptonXLite";
             });
         }
 
