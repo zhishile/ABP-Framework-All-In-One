@@ -256,3 +256,4 @@ Logs/
 wwwroot/
 /abp
 /.vscode
+/src/AbpClub.Web/package-lock.json
