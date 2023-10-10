@@ -3,14 +3,14 @@
   "name": "abpclub",
   "private": true,
   "dependencies": {
-    "@abp/aspnetcore.mvc.ui.theme.leptonxlite": "~2.0.0",
-    "@abp/cms-kit": "7.0.0",
-    "@abp/docs": "7.0.0",
-    "@abp/jstree": "7.0.0",
-    "@abp/tui-editor": "7.0.0",
-    "@abp/uppy": "7.0.0",
-    "@abp/virtual-file-explorer": "7.0.0",
-    "slugify": "1.6.5",
+    "@abp/aspnetcore.mvc.ui.theme.leptonxlite": "2.4.0",
+    "@abp/cms-kit": "7.4.0",
+    "@abp/docs": "7.4.0",
+    "@abp/jstree": "7.4.0",
+    "@abp/tui-editor": "7.4.0",
+    "@abp/uppy": "7.4.0",
+    "@abp/virtual-file-explorer": "7.4.0",
+    "slugify": "1.6.6",
     "tui-code-snippet": "2.3.3"
   }
 }
